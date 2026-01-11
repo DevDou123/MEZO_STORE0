@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="auto">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Mizo Store | سماعة AirPods Pro</title>
+  <meta name="description" content="سماعة AirPods Pro – صوت نقي وعزل ضوضاء ممتاز مع بطارية قوية. اطلب الآن والتوصيل لحد باب البيت." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{ --radius:14px; --radius-sm:10px; --brand:#2ecc71; --brand-600:#25b962; --warn:#ff4d4f; --transition:.18s ease }
+    :root, html[data-theme="light"]{
+      --bg:#f7f9fc; --card:#ffffff; --line:#e7eaf0; --text:#0f172a; --text-2:#111827;
+      --accent:#2f3137; --chip:#f1f5f9; --chip-line:#e5e7eb; --badge:#064e3b; --badge-bg:#e8fff3; --cta-text:#07290f;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0e0f12; --card:#15171c; --line:#1f2228; --text:#f7f8fa; --text-2:#e5e7eb; --accent:#2c2f36; --chip:#111319; --chip-line:#1f2228; --badge:#7ce1a4; --badge-bg:#0f1218; --cta-text:#06280f; }
+    }
+    html[data-theme="dark"]{
+      --bg:#0e0f12; --card:#15171c; --line:#1f2228; --text:#f7f8fa; --text-2:#e5e7eb; --accent:#2c2f36; --chip:#111319; --chip-line:#1f2228; --badge:#7ce1a4; --badge-bg:#0f1218; --cta-text:#06280f;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Cairo",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    img{max-width:100%;display:block;height:auto}
+    a{text-decoration:none;color:inherit}
+    button{font-family:inherit;cursor:pointer;border:0}
+    .container{width:100%;max-width:1100px;margin:0 auto;padding:16px}
+
+    header{position:sticky;top:0;z-index:1000;backdrop-filter:saturate(1.2) blur(8px);background:color-mix(in oklab,var(--bg) 70%,transparent);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 0}
+    .left-side{display:flex;align-items:center;gap:10px;min-width:0}
+    .brand{display:flex;align-items:center;gap:10px;min-width:0}
+    .brand a.logo-link{display:inline-flex;align-items:center;justify-content:center;width:120px;height:36px;border-radius:10px;overflow:hidden;border:1px solid color-mix(in oklab,var(--brand) 30%,var(--line));background:linear-gradient(135deg,var(--brand) 0%, #1db954 100%);box-shadow:0 6px 18px rgba(46,204,113,.35)}
+    .brand a.logo-link img{width:100%;height:100%;object-fit:contain}
+    .store-name{font-weight:800;color:var(--text-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+    .theme-toggle{margin-right:6px;display:flex;align-items:center;gap:8px;background:var(--chip);border:1px solid var(--chip-line);padding:8px 10px;border-radius:999px;color:var(--text-2)}
+    .trust-mini{display:flex;align-items:center;gap:8px;color:#64748b;font-size:13px;flex-wrap:wrap;justify-content:flex-end}
+    .trust-mini span{display:flex;align-items:center;gap:6px;background:var(--chip);border:1px solid var(--chip-line);padding:6px 10px;border-radius:999px}
+
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .hero{display:grid;gap:16px;grid-template-columns:1fr;padding:16px 0 8px}
+    .hero-media{padding:12px}
+    .media-wrap{aspect-ratio:1/1;border-radius:var(--radius);background:var(--chip);border:1px dashed var(--chip-line);overflow:hidden}
+    .media-wrap a{display:block;width:100%;height:100%}
+    .media-wrap a img{width:100%;height:100%;object-fit:cover}
+    .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .thumb a{display:block;width:100%;height:0;padding-bottom:62%;border-radius:12px;background:var(--chip);border:1px dashed var(--chip-line);overflow:hidden}
+    .thumb a img{width:100%;height:100%;object-fit:cover}
+
+    .hero-info{padding:16px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:var(--badge-bg);color:var(--badge);border:1px solid color-mix(in oklab,var(--brand) 35%,var(--chip-line));padding:6px 10px;border-radius:999px;font-size:12px}
+    .title{margin:10px 0 6px;font-size:clamp(22px,4.2vw,30px);line-height:1.25;font-weight:800}
+    .subtitle{color:#8892a0;font-size:clamp(13px,3.2vw,15px);margin-bottom:14px}
+    .price-box{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:var(--chip);border:1px solid var(--chip-line);padding:12px;border-radius:var(--radius-sm);margin:12px 0}
+    .old{color:#9aa1aa;text-decoration:line-through;position:relative}
+    .old::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:var(--warn);transform:translateY(-50%) rotate(-2deg);opacity:.6}
+    .new{font-size:clamp(18px,4.5vw,24px);font-weight:800}
+    .label{margin-right:auto;background:#fff3cd;color:#664d03;border:1px solid #ffe69c;padding:6px 10px;border-radius:999px;font-size:12px}
+    .cta-row{display:grid;grid-template-columns:1fr;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;font-weight:700;transition:transform var(--transition), filter var(--transition)}
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{background:var(--brand);color:var(--cta-text)}
+    .btn-primary:hover{background:var(--brand-600)}
+    .btn-sec{background:var(--accent);color:#e7eaee}
+    .btn-sec:hover{filter:brightness(1.06)}
+    .btn-block{width:100%}
+    .note{color:#8892a0;font-size:13px;margin-top:8px}
+
+    .section{margin:18px 0}
+    .section h2{font-size:18px;margin:0 0 10px}
+    .grid{display:grid;gap:10px}
+    .benefit{background:var(--chip);border:1px solid var(--chip-line);border-radius:12px;padding:12px;font-size:14px;display:flex;gap:8px}
+    .list{list-style:none;margin:0;padding:0}
+    .list li{display:flex;gap:8px;padding:10px;background:var(--chip);border:1px solid var(--chip-line);border-radius:10px;margin-bottom:8px}
+    .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .trust .tb{display:flex;align-items:center;gap:8px;background:var(--chip);border:1px solid var(--chip-line);border-radius:12px;padding:10px;color:#4b5563;font-size:13px}
+
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-end;z-index:2000}
+    .modal{background:var(--card);border:1px solid var(--line);border-top-left-radius:16px;border-top-right-radius:16px;width:100%;padding:16px 16px 24px}
+    .modal h3{margin:0 0 10px;font-size:18px}
+    .form{display:grid;gap:10px}
+    .field{display:grid;gap:6px}
+    .field label{font-size:13px;color:#6b7280}
+    .field input,.field textarea{background:var(--chip);border:1px solid var(--chip-line);border-radius:10px;color:var(--text);padding:12px;font-size:15px;outline:none;transition:border var(--transition), box-shadow var(--transition)}
+    .field input:focus,.field textarea:focus{border-color:color-mix(in oklab,var(--brand) 50%,var(--chip-line));box-shadow:0 0 0 3px color-mix(in oklab,var(--brand) 20%, transparent)}
+    .modal-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:6px}
+
+    .wa-float{position:fixed;bottom:16px;left:16px;z-index:1500;display:flex;align-items:center;gap:10px;background:color-mix(in oklab,var(--brand) 12%, #1a1f1a);border:1px solid color-mix(in oklab,var(--brand) 25%, #2c3a2f);color:#d6f5e2;padding:12px 14px;border-radius:999px;box-shadow:0 14px 28px rgba(0,0,0,.15)}
+    .wa-float .dot{width:12px;height:12px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(46,204,113,.15)}
+    .wa-float:hover{filter:brightness(1.05)}
+
+    footer{color:#64748b;font-size:12px;padding:16px 0;border-top:1px solid var(--line);margin-top:12px}
+
+    @media(min-width:600px){
+      .cta-row{grid-template-columns:1fr 1fr}
+    }
+    @media(min-width:880px){
+      .hero{grid-template-columns:1.1fr .9fr}
+      .overlay .modal{max-width:520px;margin:0 auto;border-radius:16px}
+      .overlay{align-items:center;justify-content:center}
+    }
+
+    .reveal{opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .4s ease}
+    .reveal.show{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="left-side">
+        <div class="brand">
+          <!-- Logo as a > img -->
+          <a class="logo-link" href="/" aria-label="Mizo Store">
+            <img src="images/WhatsApp Image 2026-01-10 at 8.34.44 PM.jpeg" alt="لوجو Mizo Store" />
+          </a>
+          <div class="store-name">Mizo Store</div>
+        </div>
+        <button id="themeBtn" class="theme-toggle" aria-label="تبديل الوضع">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" stroke-width="1.6"/></svg>
+          <b>الوضع</b>
+        </button>
+      </div>
+
+      <div class="trust-mini">
+        <span>🚚 توصيل لباب البيت</span>
+        <span>🔒 دفع عند الاستلام</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-media card reveal">
+        <!-- Main product as a > img -->
+        <div class="media-wrap" aria-label="صور المنتج">
+          <a href="">
+            <img src="images/WhatsApp Image 2026-01-10 at 9.05.49 PM.jpeg" alt="سماعات لاسلكية" loading="eager" />
+          </a>
+        </div>
+        <!-- Thumbs as a > img -->
+        <div class="thumbs">
+          <div class="thumb"><a href="images/download.webp"><img src="images/download.webp" alt="زاوية 1" loading="lazy" /></a></div>
+          <div class="thumb"><a href="images/OIP.jpg"><img src="images/OIP.jpg" alt="زاوية 2" loading="lazy" /></a></div>
+          <div class="thumb"><a href="images/th.webp"><img src="images/th.webp" alt="الاكسسوارات" loading="lazy" /></a></div>
+        </div>
+      </div>
+
+      <div class="hero-info card reveal">
+        <span class="badge">عرض لفترة محدودة ⏳</span>
+        <h1 class="title">سماعة AirPods Pro</h1>
+        <p class="subtitle">صوت يفرّق من أول ثانية — مريحة، عملية، وتعتمد عليها في كل موقف.</p>
+
+        <div class="price-box">
+          <div class="old">550 جنيه</div>
+          <div class="new">350 جنيه</div>
+          <div class="label">خصم خاص اليوم</div>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn btn-primary btn-block" id="buyBtn">إتمام الشراء</button>
+          <a class="btn btn-sec btn-block" id="waQuick" href="#" rel="noopener">اطلب الآن على واتساب</a>
+        </div>
+        <div class="note">✔️ دفع عند الاستلام | ✔️ ممكن ترجيع خلال 7 أيام | ✔️ شحن سريع</div>
+
+        <div class="section">
+          <h2>ليه هتحب السماعة؟</h2>
+          <div class="grid">
+            <div class="benefit">✔️ <b>صوت نقي وعالي</b> لتجربة مزيكا ممتعة</div>
+            <div class="benefit">✔️ <b>عزل ضوضاء ممتاز</b> تركّز مهما كان حواليك</div>
+            <div class="benefit">✔️ <b>مايك واضح للمكالمات</b> صوتك واصل وصريح</div>
+            <div class="benefit">✔️ <b>تحكم باللمس</b> تشغيل/إيقاف/رد بسهولة</div>
+            <div class="benefit">✔️ <b>بطارية قوية + شحن سريع</b> تكمل معاك اليوم</div>
+            <div class="benefit">✔️ <b>مريحة ومبتقعش</b> وقابلة لمقاسات مختلفة</div>
+            <div class="benefit">✔️ <b>شغالة مع iPhone & Android</b></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>محتويات العلبة</h2>
+          <ul class="list">
+            <li>🎧 السماعتين</li>
+            <li>📦 علبة شحن</li>
+            <li>🔌 كابل شحن</li>
+            <li>🧩 ودانه بأكتر من مقاس</li>
+          </ul>
+          <div class="note">مناسبة للمكالمات – المزيكا – الجيم – الشغل | شكل شيك + أداء يعتمد عليه</div>
+        </div>
+
+        <div class="section">
+          <h2>ثقة وراحة</h2>
+          <div class="trust">
+            <div class="tb">🔒 دفع عند الاستلام</div>
+            <div class="tb">↩️ استرجاع خلال 7 أيام</div>
+            <div class="tb">⚡ شحن سريع</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>تفاصيل مهمة</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <div class="card" style="padding:12px">
+          <h3 style="margin:0 0 6px;font-size:16px">جودة الصوت</h3>
+          <p style="color:#6b7280;margin:0">توازن ممتاز بين البيس والوضوح علشان تستمتع بكل تراك ومكالمة من غير تشويش.</p>
+        </div>
+        <div class="card" style="padding:12px">
+          <h3 style="margin:0 0 6px;font-size:16px">الراحة والثبات</h3>
+          <p style="color:#6b7280;margin:0">تصميم خفيف وودانات بمقاسات مختلفة علشان متقعش من ودنك في الحركة والتمرين.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="overlay" id="orderOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+      <h3 id="orderTitle">إتمام الشراء</h3>
+      <form class="form" id="orderForm">
+        <div class="field">
+          <label for="name">الاسم بالكامل</label>
+          <input id="name" name="name" type="text" required placeholder="اكتب اسمك هنا" />
+        </div>
+        <div class="field">
+          <label for="phone">رقم الموبايل</label>
+          <input id="phone" name="phone" type="tel" inputmode="numeric" required placeholder="01XXXXXXXXX" />
+        </div>
+        <div class="field">
+          <label for="address">العنوان بالتفصيل</label>
+          <textarea id="address" name="address" rows="3" required placeholder="المحافظة، المدينة، الشارع، أقرب علامة"></textarea>
+        </div>
+        <input type="hidden" id="product" value="سماعة AirPods Pro" />
+        <input type="hidden" id="price" value="350 جنيه" />
+        <div class="modal-actions">
+          <button type="button" class="btn btn-sec btn-block" id="closeOverlay">إلغاء</button>
+          <button type="submit" class="btn btn-primary btn-block">إرسال الطلب على واتساب</button>
+        </div>
+        <div class="note">سيتم فتح واتساب تلقائيًا مع تفاصيل طلبك.</div>
+      </form>
+    </div>
+  </div>
+
+  <a class="wa-float" id="waFloatBtn" href="#" rel="noopener" aria-label="تواصل واتساب">
+    <div class="dot" aria-hidden="true"></div>
+    <div>تواصل معنا فورًا</div>
+  </a>
+
+  <footer class="container">
+    © <span id="year"></span> Mizo Store — جميع الحقوق محفوظة
+  </footer>
+
+  <script>
+    // Reveal
+    const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');obs.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    // Theme
+    const root=document.documentElement, themeBtn=document.getElementById('themeBtn');
+    const saved=localStorage.getItem('mizo-theme'); if(saved) root.setAttribute('data-theme',saved);
+    function cycleTheme(){ const cur=root.getAttribute('data-theme')||'auto'; const next=cur==='auto'?'light':cur==='light'?'dark':'auto'; root.setAttribute('data-theme',next); localStorage.setItem('mizo-theme',next); themeBtn.querySelector('b').textContent= next==='auto'?'الوضع':(next==='light'?'فاتح':'داكن'); }
+    themeBtn.addEventListener('click',cycleTheme);
+
+    // WhatsApp
+    const WA_NUMBER="01064215621";
+    function waLinkFromOrder({name,phone,address,product,price}){
+      const msg=["طلب جديد من Mizo Store:","-------------------------","اسم العميل: "+name,"رقم الهاتف: "+phone,"العنوان: "+address,"اسم المنتج: "+product,"السعر: "+price].join("\n");
+      const intl="2"+WA_NUMBER; return "https://wa.me/"+intl+"?text="+encodeURIComponent(msg);
+    }
+
+    // Modal
+    const overlay=document.getElementById('orderOverlay'), buyBtn=document.getElementById('buyBtn'), closeOverlay=document.getElementById('closeOverlay');
+    function openOverlay(){ overlay.style.display='flex'; overlay.setAttribute('aria-hidden','false'); document.getElementById('name').focus(); }
+    function hideOverlay(){ overlay.style.display='none'; overlay.setAttribute('aria-hidden','true'); }
+    buyBtn.addEventListener('click',openOverlay); closeOverlay.addEventListener('click',hideOverlay);
+    overlay.addEventListener('click',e=>{ if(e.target===overlay) hideOverlay(); });
+    document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&overlay.getAttribute('aria-hidden')==='false') hideOverlay(); });
+
+    // Submit
+    document.getElementById('orderForm').addEventListener('submit',e=>{
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      const address=document.getElementById('address').value.trim();
+      const product=document.getElementById('product').value;
+      const price=document.getElementById('price').value;
+      if(!name||!phone||!address){ alert("من فضلك املأ كل البيانات المطلوبة"); return; }
+      window.open(waLinkFromOrder({name,phone,address,product,price}),"_blank");
+      hideOverlay();
+    });
+
+    // Quick WA CTAs
+    function quickMsg(){ const product=document.getElementById('product').value; const price=document.getElementById('price').value; const msg="مرحبا، عايز استفسر واطلب "+product+" بسعر "+price; const intl="2"+WA_NUMBER; return "https://wa.me/"+intl+"?text="+encodeURIComponent(msg); }
+    document.getElementById('waQuick').setAttribute('href',quickMsg());
+    document.getElementById('waFloatBtn').setAttribute('href',quickMsg());
+
+    // Year
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
